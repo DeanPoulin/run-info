@@ -1,0 +1,23 @@
+$icon-font-path: "/bower_components/sass-bootstrap/fonts/";
+
+@import 'sass-bootstrap/lib/bootstrap';
+
+.app-content {
+  padding: 20px;
+
+  .page-header {
+    margin-top: 10px;
+  }
+
+  table.results {
+    thead {
+      a {
+        display: block;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    a { cursor: pointer; }
+  }
+}

@@ -1,0 +1,30 @@
+<h1 class="page-header">Bobtoberfest 4 Miler <small>4 Mile Road Race</small></h1>
+<p class="lead">Kelly Drive, Fairmount Park, Philadelphia, PA 12/01/2013 10:00am Weather: Sunny 45 degrees</p>
+<table class="results table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th><a ng-click="changeSorting('Place')">Place</a></th>
+            <th><a ng-click="changeSorting('Place')">No.</a></th>
+            <th><a ng-click="changeSorting('Place')">Name</a></th>
+            <th><a ng-click="changeSorting('Place')">Age</a></th>
+            <th><a ng-click="changeSorting('Place')">Div/Total</a></th>
+            <th><a ng-click="changeSorting('Place')">Sex/Total</a></th>
+            <th><a ng-click="changeSorting('Place')">Sex</a></th>
+            <th><a ng-click="changeSorting('Place')">Time</a></th>
+            <th><a ng-click="changeSorting('Place')">Pace</a></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="result in results | orderBy:sort.column:sort.descending">
+            <td>{{result.Place}}</td>
+            <td>{{result.Num}}</td>
+            <td><a ng-click="open(result)">{{result.FirstName}} {{result.LastName}}</a></td>
+            <td>{{result.Age}}</td>
+            <td>{{result.AgePlace}}/{{result.AgeTotal}}</td>
+            <td>{{result.SexPlace}}/{{result.SexTotal}}</td>
+            <td>{{result.Sex}}</td>
+            <td>{{result.Time}}</td>
+            <td>{{result.Pace}}</td>
+        </tr>
+    </tbody>
+</table>
